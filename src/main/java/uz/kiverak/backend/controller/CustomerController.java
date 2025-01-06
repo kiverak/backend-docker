@@ -15,7 +15,6 @@ public class CustomerController {
 
     private CustomerRepository repository;
 
-    // для упрощения кода - сразу будем вызывать метод репозитория, без класса @Service
     public CustomerController(CustomerRepository repository) {
         this.repository = repository;
     }

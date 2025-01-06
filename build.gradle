@@ -1,12 +1,12 @@
 plugins {
-    id 'org.springframework.boot' version '2.6.3'
-    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'org.springframework.boot' version '3.4.1'
+    id 'io.spring.dependency-management' version '1.1.7'
     id 'java'
 }
 
 group = 'uz.kiverak.backend'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '19'
+sourceCompatibility = '21'
 
 
 repositories {
@@ -21,16 +21,13 @@ jar {
 }
 
 dependencies {
-    // стартеры SpringBoot
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
-    // lombok
-    compileOnly 'org.projectlombok:lombok:1.18.26'
-    annotationProcessor 'org.projectlombok:lombok:1.18.26'
+    compileOnly 'org.projectlombok:lombok:1.18.36'
+    annotationProcessor 'org.projectlombok:lombok:1.18.36'
 
-    // драйвер БД
-    implementation 'org.postgresql:postgresql:42.2.19'
+    implementation 'org.postgresql:postgresql:42.7.4'
 }
 
 
