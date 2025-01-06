@@ -13,7 +13,7 @@ import java.util.List;
 @RequestMapping("/customer")
 public class CustomerController {
 
-    private CustomerRepository repository;
+    private final CustomerRepository repository;
 
     public CustomerController(CustomerRepository repository) {
         this.repository = repository;
@@ -23,6 +23,11 @@ public class CustomerController {
     public ResponseEntity<List<Customer>> findAll(){
         List<Customer> list =  repository.findAll();
         return ResponseEntity.ok(list);
+    }
+
+    @GetMapping("/test")
+    public ResponseEntity<String> test(){
+        return ResponseEntity.ok("test");
     }
 
 }
